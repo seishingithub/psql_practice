@@ -4,10 +4,15 @@
 <body>
 <form action="/" method="post">
   <input type="text" name="description" placeholder="Insert a task">
-  <input type-="submit" value="Submit">
+  <input type="submit" value="Submit">
 </form>
 
-<%= tasks %>
+<ul>
+  <% tasks.each do |task| %>
+    <li><%= task[:description] %></li>
+    <% end %>
+</ul>
+
 </body>
 
 </html>
